@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+ 
+kind: Certificate
+metadata:
+  name: easternparkway-xyz-tls
+spec:
+  secretName: easternparkway-xyz
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: easternparkway.xyz
+  dnsNames:
+    - easternparkway.xyz
+    - www.easternparkway.xyz
